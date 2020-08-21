@@ -1,0 +1,51 @@
+.circle {
+    position: absolute;
+    bottom: 2.7%;
+    right: 4%;
+    width: 25%;
+    height: 16.4%;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.circle :first-child {
+    font-size: 42px;
+    line-height: 22px;
+    padding: 20px 0 8px;
+    color: white;
+    opacity: 1 !important;
+}
+
+.circle :last-child {
+    font-size: 21px;
+    color: white;
+    opacity: 1 !important;
+}
+
+.blueCircle {
+    background-color: #1698d9;
+}
+
+.pinkCircle {
+    background-color: #e52e7a;
+}
+
+.greyCircle {
+    background-color: #b3b3b3;
+    opacity: 1 !important;
+}
+
+@media (max-width: 460px) {
+    .circle :first-child {
+        font-size: 28px;
+        padding: 9px 0 0px;
+    }
+
+    .circle :last-child {
+        font-size: 18px;
+    }
+
+    .circle {
+        width: 23%;
+    }
+}

@@ -1,0 +1,17 @@
+.layout {
+    max-width: 1180px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 1100px) {
+    .layout {
+        padding: 0;
+    }
+}
+
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 320px) and (max-width: 1099px) {
+    .layout {
+        padding: 0 20px;
+    }
+}

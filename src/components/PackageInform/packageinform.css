@@ -1,0 +1,31 @@
+.text {
+    margin-top: 13px;
+    color: white;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.button {
+    color: #1698d9;
+    border-bottom: 1px dashed #1698d9;
+    position: relative;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+}
+
+.button::after {
+    content: '.';
+    position: absolute;
+    right: -5px;
+}
+
+.yellow {
+    color: #ffff66;
+}
+
+@media (max-width: 460px) {
+    .text {
+        min-width: 240px;
+    }
+}

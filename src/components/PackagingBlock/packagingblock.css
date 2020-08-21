@@ -1,0 +1,17 @@
+.packagingBlock {
+    margin: 0 20px;
+    max-width: 320px;
+}
+
+@media (max-width: 1099px) {
+    .packagingBlock {
+        margin: 10px 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    .packagingBlock {
+        margin: 15px 0;
+        max-width: 240px;
+    }
+}

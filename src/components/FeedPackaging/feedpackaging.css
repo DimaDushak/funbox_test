@@ -1,0 +1,208 @@
+.textBlock {
+    padding: 17px 59px 268px 45px;
+    text-align: left;
+}
+
+.heading {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 6px 0 0px -2px;
+}
+
+.subheading {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+.descriptions {
+    margin: 15px 0 34px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.descriptions :nth-child(n) {
+    color: #666666;
+}
+
+.lastDescription {
+    margin-bottom: -16px;
+}
+
+.feedPackaging {
+    overflow: hidden;
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.pink {
+    color: #e52e7a;
+}
+
+.grey {
+    color: #666666;
+}
+
+.image {
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+}
+
+@supports (clip-path: polygon(45px 0, 100% 0, 100% 100%, 0 100%, 0 45px)) {
+    .feedPackaging {
+        clip-path: polygon(45px 0, 100% 0, 100% 100%, 0 100%, 0 45px);
+        border: 4px solid;
+    }
+
+    .feedPackaging::before {
+        content: '';
+        display: block;
+        transform: rotate(-45deg);
+        position: absolute;
+        transform-origin: bottom left;
+        top: 38px;
+        left: 0;
+        width: 62px;
+        height: 4px;
+    }
+
+    .blueBorder {
+        border-color: #1698d9;
+    }
+    
+    .greyBorder {
+        border-color: #b3b3b3;
+        cursor: default;
+    }
+    
+    .greyBorder :nth-child(n) {
+        opacity: 0.6;
+    }
+    
+    .pinkBorder {
+        border-color: #e52e7a;
+    }
+
+    .blueBorder::before {
+        background: #1698d9;
+    }
+
+    .greyBorder::before {
+        background: #b3b3b3;
+    }
+
+    .pinkBorder::before {
+        background: #e52e7a;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .feedPackaging {
+        background: linear-gradient(135deg, transparent 30px, white 0);
+    }
+
+    .feedPackaging::before, .feedPackaging::after, .border::after {
+        position: absolute;
+        content: '';
+    }
+
+    .feedPackaging::before {
+        width: 99%;
+        z-index: 10;
+        height: 90%;
+        border-radius: 0 0 12px 12px;
+        left: 0;
+        bottom: 0;
+        border-left: 4px solid;
+        border-bottom: 4px solid;
+    }
+    
+    .feedPackaging::after {
+        width: 85%;
+        height: 99%;
+        border-radius: 0 12px 12px 0;
+        right: 0;
+        top: 0;
+        border-right: 4px solid;
+        border-top: 4px solid;
+    }
+
+    .border::after {
+        display: block;
+        transform: rotate(-45deg);
+        transform-origin: bottom left;
+        top: 44px;
+        left: 0;
+        width: 65px;
+        height: 4px;
+    }
+
+    .blueBorder::before, .blueBorder::after {
+        border-color: #1698d9;
+    }
+
+    .blueBorder .border::after {
+        background: #1698d9;
+    }
+    
+    .greyBorder::before, .greyBorder::after {
+        border-color: #b3b3b3;
+        cursor: default;
+    }
+    
+    .greyBorder :nth-child(n) {
+        opacity: 0.6;
+    }
+
+    .greyBorder .border::after {
+        background: #b3b3b3;
+    }
+    
+    .pinkBorder::before, .pinkBorder::after {
+        border-color: #e52e7a;
+    }
+
+    .pinkBorder .border::after {
+        background: #e52e7a;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 460px) {
+    .feedPackaging::before {
+        height: 86%;
+    }
+
+    .feedPackaging::after {
+        width: 80%;
+    }
+}
+
+@media (max-width: 460px) {
+    .image {
+        width: 75%;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    .textBlock {
+        padding: 17px 40px 160px 38px;
+    }
+
+    .textBlock :first-child {
+        font-size: 12px;
+    }
+
+    .subheading {
+        font-size: 18px;
+    }
+
+    .descriptions {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
